@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script defer src="/__/firebase/8.4.0/firebase-app.js"></script>
+    <script defer src="/__/firebase/8.4.0/firebase-firestore.js"></script>
+    <script defer src="/__/firebase/init.js"></script>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+    <title>DTVT Meet</title>
+  </head>
+  <body>
+  <div id="headline" class="headline">
+    <h2>Chào mừng đến với DTVT Meet</h2>
+    <p>Ứng dụng chat và gọi video dựa trên bộ mã nguồn mở WebRTC</p>
+  </div>    
+  <div id="step1" class="videos">
+      <span>
+        <h5>Cấp quyền truy cập camera và tạo phòng để bắt đầu trò chuyện</h5>
+        <video id="webcamVideo" width="420"autoplay playsinline></video><br>
+      </span>
+    <button id="webcamButton" class="btn">Bật camera</button>
+    <button id="readyButton" class="btn">GO!</button>
+  </div>
+
+  <div id="step2">  
+    <h3>Tạo phòng mới</h3>    
+    <input id="roomInput" />
+    <button id="createBtn" class="btn">Tạo phòng</button>
+    
+    <h3>Tham gia phòng</h3>
+    <input id="callInput" />
+    <button id="answerButton" class="btn">Vào phòng</button>
+  </div>  
+  
+  <div id="step3" class="step3">    
+    <div class="block1">
+      <video id="webcamVideoat" width="320" height="240" autoplay playsinline></video>   
+    </div>
+
+    <div class="block2">
+      <video id="remoteVideo" width="640" height="480" autoplay playsinline></video>
+    </div>
+    
+    <div id="chatBox" class=chatBox>
+        <ul id="messages">
+          <li><span style="font-weight:bold">Khung tin nhắn</span></li>
+        </ul>
+        <form id="form" action="">
+          <input id="input" autocomplete="off" /><button id="sendBtn" class="btn" disabled="true">Gửi</button>
+        </form>
+    </div>  
+  </div>
+  <footer>
+    <p>Đồ án tốt nghiệp 2021 - Nguyễn Công Thịnh</p>
+    
+  </footer>
+
+  <script type="module" src="/main.js"></script>
+  <link rel="stylesheet" href="styles.css"> 
+  </body>
+</html>
